@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick-theme.css"/>
+    <script type="text/javascript" src="/plugin/slick/slick.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
     <script src="index.js" defer></script>
 </head>
 <body>
@@ -29,12 +33,45 @@
         </section>
     </header>
     <main>
-        <article>
-            Article!
-        </article>
+        <section id="slider" style="padding: 300px 100px; background-color: aqua;">
+            <div id="slider-div">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+            </div>
+        </section>
+        <section id="best__products">best products</section>
+        <section id="recent__project">recent project</section>
+        <section id="video">video</section>
+        <section id="artworks">artworks</section>
+        <section id="insta__img">insta img</section>
     </main>
     <footer>
         Footer!
     </footer>
+    <script>
+    $(function(){
+        $('#slider-div').slick({
+          slide: 'div',
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          speed: 1000,
+          arrows: true,
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 10000,
+          pauseOnHover: true,
+          vertical: false,
+          dotsClass: "slick-dots"
+        })
+      })
+      </script>
 </body>
 </html>
