@@ -1,0 +1,49 @@
+/* All */
+html body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+    
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: powderblue;
+}
+
+#header__container {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+.header__logo {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.header__menu {
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    column-gap: 15px;
+}
+
+/* Media query */
+@media ( max-width: 1200px ) {
+    #header__container {
+        padding: 0 30px;
+    }
+}
