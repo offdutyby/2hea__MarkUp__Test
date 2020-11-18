@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script src="index.js" defer></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
     <header>
-        <section id="header__container">
+        <section id="header">
             <div class="header__logo">
                 STUDIO BIG
             </div>
             <ul class="header__menu">
-                <li id="about">ABOUT</li>
-                <li id="project">PROJECT</li>
-                <li id="artworks">ARTWORKS</li>
-                <li id="contact">CONTACTS</li>
-                <li id="shop">SHOP</li>
-                <li id="instagram">INSTAGRAM</li>
-                <li id="insta__logo">
+                <li class="header__menu__item">ABOUT</li>
+                <li class="header__menu__item">PROJECT</li>
+                <li class="header__menu__item">ARTWORKS</li>
+                <li class="header__menu__item">CONTACTS</li>
+                <li class="header__menu__item">SHOP</li>
+                <li class="header__menu__item">INSTAGRAM</li>
+                <li class="header__menu__item">
                     <img src="https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png/v1/fill/w_19,h_19,al_c,q_85,usm_0.66_1.00_0.01/01c3aff52f2a4dffa526d7a9843d46ea.webp" alt="instagram logo">
                 </li>
             </ul>
@@ -32,15 +35,27 @@
     </header>
     <main>
         <section id="slider">
-            <div class="slider">
+            <div class="slider__part">
                 <div class="slider__item">
                     <img src="https://static.wixstatic.com/media/465b65_a0878025d0e64125aaec34345d9f6b74~mv2.jpg/v1/fill/w_1903,h_450,al_b,q_85,usm_0.66_1.00_0.01/465b65_a0878025d0e64125aaec34345d9f6b74~mv2.webp" alt="">
+                    <div class="slider__item__desc">
+                        <div>Crumbs, Crumbs!</div>
+                        <div>Crumbs' Daily Life & Marvelous Moments <br> Would you like to meet our story?</div>
+                    </div>
                 </div>
                 <div class="slider__item">
                     <img src="https://static.wixstatic.com/media/465b65_a4bc7709108448f497c98c73bde42a8e~mv2.jpg/v1/fill/w_1903,h_450,al_b,q_85,usm_0.66_1.00_0.01/465b65_a4bc7709108448f497c98c73bde42a8e~mv2.webp" alt="">
+                    <div class="slider__item__desc">
+                        <div>Seal Sticker Set</div>
+                        <div>Decorating a diary <br> with cute crumbs crumbs <br> sticker friends!</div>
+                    </div>
                 </div>
                 <div class="slider__item">
                     <img src="https://static.wixstatic.com/media/465b65_88f129b514a54ff8b20b8b53b44edbf4~mv2.jpg/v1/fill/w_1903,h_450,al_b,q_85,usm_0.66_1.00_0.01/465b65_88f129b514a54ff8b20b8b53b44edbf4~mv2.webp" alt="">
+                        <div class="slider__item__desc">
+                            <div>Crumbs, Crumbs!</div>
+                            <div>Crumbs' Daily Life & Marvelous Moments <br> Would you like to meet our story?</div>
+                        </div>
                 </div>
             </div>
         </section>
@@ -212,9 +227,7 @@
                 </ul>
             </div>
         </section>
+
     </footer>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>

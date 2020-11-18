@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.slider').slick({
+  $('.slider__part').slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
