@@ -76,24 +76,25 @@ header {
   column-gap: 12px;
 }
 
-.hidden__menubar {
-  visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 20px;
-  justify-content: space-between;
+.mobile__menubar {
+  display: none;
 }
 
-.hidden__menubar__item {
-  width: 25px;
-  height: 2px;
+.mobile__menubar__item {
+  width: 27px;
+  height: 2.4px;
   background-color: black;
+}
+
+.mobile__instalogo {
+  display: none;
 }
 
 /* ---------------Main--------------- */
 /* ---------------Slider--------------- */
 
 .slider__part {
+  width: 100%;
   height: 600px;
 }
 
@@ -140,15 +141,15 @@ header {
 }
 
 #slider button.slick-arrow {
-  font-size: 0;
+  width: 66px;
+  height: 66px;
+  margin-top: -33px;
   position: absolute;
   left: 50%;
   top: 60%;
-  margin-top: -33px;
-  width: 66px;
-  height: 66px;
   z-index: 999;
   outline: 0;
+  font-size: 0;
 }
 
 #slider button.slick-prev {
@@ -270,7 +271,7 @@ header {
 }
 
 .project__desc__detail :nth-child(2) {
-  width: 400px;
+  max-width: 400px;
   color: grey;
   margin-bottom: 10px;
   overflow: hidden;
@@ -304,6 +305,10 @@ header {
   display: flex;
   justify-content: space-between;
   height: 312px;
+}
+
+.project__cards__bottom.project__mobile__slider {
+  display: none;
 }
 
 .project__cards__bottom .project__card {
@@ -353,6 +358,10 @@ header {
   background-size: contain;
 }
 
+.project__mobile__slider{
+  display: none;
+}
+
 /* Video */
 .video__cards {
   display: flex;
@@ -363,6 +372,7 @@ header {
 .video__card {
   width: 580px;
 }
+
 iframe {
   width: 100%;
 }
@@ -377,7 +387,7 @@ iframe {
 }
 
 .video__card__desc > p {
-  width: 450px;
+  max-width: 450px;
   margin: 0 auto;
   font-size: 14px;
   overflow: hidden;
@@ -495,15 +505,139 @@ footer section li {
   margin-left: 213px;
 }
 
-/* Media query */
+/*------------ Media query ------------*/
 @media all and (max-width: 420px) {
-  .hidden__menubar {
-    visibility: visible;
+
+  /* All */
+  #products,
+  #project,
+  #video,
+  #artworks,
+  #instagram,
+  #header {
+    max-width: 100%;
+    margin: 150px 0;
+    padding: 0 10px;
+}
+
+  /* Mobile-Header */
+  #header {
+    display: flex;
+    align-items: center;
+    width: 420px;
+    padding: 0 17px;
   }
-  .header__menu__item.hidden__item {
+  
+  .header__menu {
     display: none;
   }
-  #header {
+
+  .header__logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+  }
+
+  .mobile__menubar {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 40px;
+  }
+
+  .mobile__instalogo {
+    display: block;
+  }
+
+  .mobile__instalogo img {
+    width: 40px;
+  }
+
+  /* Mobile-Slider */
+  .slider__item__desc button {
+    display: none;
+  }
+  .slider__item__desc {
+    top: 150px;
+  }
+
+  /* Mobile-Products */
+  .products__cards{
+    width: 400px;
+    padding: 0 4px;
+  }
+  .products__card {
+    width: 50%;
+  }
+  .products__card.hidden__products{
+    display: none;
+  }
+
+  /* Mobile-Project */
+  .project__cards__top .project__card{
+    flex-direction: column;
+  }
+
+  .project__cards__bottom.project__mobile__slider {
+    display: block;
+  }
+
+  .project__cards__bottom.project__mobile__hidden {
+    display: none;
+  }
+
+  .project__cards__bottom.project__mobile__slider .info__title {
+    font-size: 25px;    
+  }
+
+  .like {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  /* Mobile_Video */
+  .video__cards {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .video__card__contents {
     width: 420px;
   }
+  .video__card__contents iframe {
+    width: 95%;
+  }
+
+  .video__card__desc {
+    width: 390px;
+  }
+
+  /* Mobile_Artworks */
+  .artworks__cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Mobile-Instagram */
+  .instagram__cards {
+    gap: 3px;
+  }
+  .instagram__card {
+    width: 32%;
+  }
+
+    /* Mobile-Footer */
+    footer {
+      width: 100%;
+    }
+    footer .contacts {
+      padding-right: 5px;
+    }
+    
+    footer .email {
+      display: none;
+    }
 }
