@@ -44,28 +44,31 @@ const menubar = document.getElementById('mobile__menubar');
 const remove = document.getElementById('remove__modal');
 const body  =  document.body
 
+
+
 menubar.addEventListener('click', function(){
     modal.style.visibility = 'visible';
     modal.style.left = 0;
     modal.style.top = 0;
     modal.style.opacity = 1;
-    modal.style.transition = 'linear 900ms';
+    modal.style.transition = ' 900ms';
+    modal.style.display= 'block';
 
-    body.style.overflow = 'hidden';
-    body.style.position = 'fixed';
-    body.style.width = '100%';
-    body.style.height = '100%';
-    // modal.id = "plusModal"
+    body.style.overflowY = 'hidden';
+    // body.style.position = 'fixed';
+    body.style.width = '100vw';
+    body.style.height = '100vh';
+    // modal.className = "plusModal"
     // body.id = "plusBody"
 })
 
 remove.addEventListener('click', function(){
   modal.style.visibility = 'hidden';
-  modal.style.left = '1100px';
+  modal.style.left = '100%';
   modal.style.top = 0;
   modal.style.opacity = 0;
-  body.style.overflow = 'visible';
+  body.style.overflowY = 'visible';
   body.style.position = 'static';
-  body.style.width = '100%';
+  body.style.width = '100vw';
   body.style.height = '100%';
 })

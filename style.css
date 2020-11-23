@@ -509,7 +509,7 @@ footer section li {
 /* Modal Menu */
 #modal__menu {
   width: 100%;
-  height: 1100px;
+  height: 100vh;
   position: absolute;
   left: 1100px;
   transition: linear 900ms;
@@ -517,6 +517,8 @@ footer section li {
   z-index: 99;
   opacity: 0;
   background-color: white;
+  scrollbar-width: none;
+  display: none;
 }
 
 #modal__menu ul {
@@ -728,5 +730,10 @@ footer section li {
 
   footer .email {
     display: none;
+  }
+
+  body {
+    width: 100vw;
+    overflow-x: hidden;
   }
 }
